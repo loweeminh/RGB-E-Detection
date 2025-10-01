@@ -1,4 +1,6 @@
-# Adaptive Token Fusion Transformer for Multi-Modal Object Detection with RGB and Event Data
+<h1 align="center">
+Adaptive Token Fusion Transformer for Multi-Modal Object Detection with RGB and Event Data
+</h1>
 
 Official code repository for my research paper "Adaptive Token Fusion Transformer for Multi-Modal Object Detection with RGB and Event Data" at National Taiwan University of Science and Technology, HIS-LAB.
 
@@ -6,19 +8,13 @@ Official code repository for my research paper "Adaptive Token Fusion Transforme
 
 ## Abstract
 
-Object detection under challenging conditions, such as low illumination and high dynamic range, remains a limitation for conventional frame-based cameras. Event cameras, which asynchronously record pixel-level brightness changes with high temporal resolution and wide dynamic range, offer a complementary sensing modality. In this work, we introduce a novel framework that encourages joint learning of RGB and event data within a shared feature space using the Transformer. At the preprocessing step, SpinEV representation combines positive and negative event counts with a polarity transition map, enabling precise encoding of spatial event distributions and motion patterns in a compact structured format. The Adaptive Token Fusion Transformer (ATFT) modules operate across multiple feature scales, leveraging attention mechanisms to integrate informative tokens and suppress cross-modal noise. Extensive experiments on the public DSEC-Detection dataset demonstrate that our fusion method outperforms the state-of-the-art approach.
+Object detection under challenging conditions,such as low illumination and high dynamic range, remains alimitation for conventional frame-based cameras. Eventcameras, which asynchronously record pixel-level brightnesschanges with high temporal resolution and wide dynamic range,offer a complementary sensing modality. In this work, weintroduce a novel framework that encourages joint learning ofRGB and event data within a shared feature space using theTransformer. At the preprocessing step, ToggleEV eventrepresentation combines positive and negative event counts witha polarity transition map, enabling precise encoding of spatialevent distributions and motion patterns in a compact structuredformat. The Adaptive Token Fusion Transformer (ATFT)modules operate across multiple feature scales, leveragingattention mechanisms to integrate informative tokens andsuppress cross-modal noise. Extensive experiments on the publicDSEC-Detection dataset demonstrate that our fusion methodoutperforms the state-of-the-art approach.
 
-## Installation
+## Package Installation
 
-To install, run:
+To install the required packages, run:
 
 ```
-git clone https://github.com/loweeminh/RGBE-Det.git
-cd ATFT
-
-python3 -m venv atft_venv
-source atf_venv/bin/activate
-
 pip3 install -r requirements.txt
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
 ```
@@ -61,11 +57,10 @@ Organize them into the following directory structure:
         |       └── ...
         └── ...
 ```
-The **DSEC-Det** folder should be a subdirectory within the **ATFT** folder.
 
-Implement SpinEV event representation to preprocess raw event data:
+Implement ToggleEV event representation to preprocess raw event data:
 ```
-python3 spinEV.py
+python3 toggleEV.py
 ```
 
 Generate labels and clean image files for downstream processes:

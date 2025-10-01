@@ -86,10 +86,13 @@ from .transformer import (
     TransformerBlock,
     TransformerEncoderLayer,
     TransformerLayer,
-    # loweeminh
+)
+
+# loweeminh
+from .custom_module import (
     ATFT,
     Add,
-    Add2,
+    Add2, 
 )
 
 __all__ = (

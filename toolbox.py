@@ -138,9 +138,9 @@ def main():
 
     # Rename files in a sequential folders with sequential numbers for YOLO dataset format
     print("Renaming files with sequential numbers for YOLO dataset format ...")
-    start_index_0 = 0
-    start_index_1 = 0
     for sensor in g_sensors:
+        start_index_0 = 0
+        start_index_1 = 0
         for folder_name in g_folder_names_train:
             base_path_images = 'datasets/dsec_' + sensor + '/train/images'
             base_path_labels = 'datasets/dsec_' + sensor + '/train/labels'
@@ -156,7 +156,7 @@ def main():
     print("Processing complete!")
 
 if __name__ == "__main__":
-    g_sensors = ['events']
+    g_sensors = ['rgb', 'events']
 
     g_img_width = 640
     g_img_height = 480
