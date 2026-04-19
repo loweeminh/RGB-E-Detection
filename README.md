@@ -2,7 +2,7 @@
 Adaptive Token Fusion Transformer for Multi-Modal Object Detection with RGB and Event Data
 </h1>
 
-Official code implementation for the paper "Adaptive Token Fusion Transformer for Multi-Modal Object Detection with RGB and Event Data", accepted at Automation 2025 in Kaohsiung, Taiwan.
+Official code implementation for the paper "[Adaptive Token Fusion Transformer for Multi-Modal Object Detection with RGB and Event Data](https://ieeexplore.ieee.org/abstract/document/11389901)", accepted at **Automation 2025** in Kaohsiung, Taiwan.
 
 If you find this work useful for your research, please cite our paper:
 ```
