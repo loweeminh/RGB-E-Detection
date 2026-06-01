@@ -26,7 +26,7 @@ To install the required packages, run:
 
 ```
 pip3 install -r requirements.txt
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126
 ```
 
 ## Dataset
@@ -73,7 +73,7 @@ Implement ToggleEV event representation to preprocess raw event data:
 python3 toggleEV.py
 ```
 
-Generate labels and clean image files for downstream processes:
+Generate labels and image files for downstream processes:
 ```
 python3 toolbox.py
 ```
@@ -82,14 +82,14 @@ python3 toolbox.py
 
 To train ATFT model, run:
 ```
-python3 train_fusion.py
+python3 ultralytics-main/train_atft.py
 ```
 
 ## Validation
 
 To validate ATFT model using our pretrained weights, run:
 ```
-python3 val_fusion.py
+python3 ultralytics-main/val_atft.py
 ```
 
 ## Code Acknowledgments
