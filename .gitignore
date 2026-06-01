@@ -1,4 +1,3 @@
 atft_venv/
-datasets/
-DSEC-Det/
-runs/
+dsec_datasets/
+pku_datasets/

@@ -1,12 +1,12 @@
 # Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
-path: ../datasets # dataset root dir
+path: /home/loweeminh/RGB-E-Detection/dsec_datasets # dataset root dir
 
-train_event: dsec_events/train # train images (relative to 'path') 63145 images
-val_event: dsec_events/val # val images (relative to 'path') 15079 images
+train_event: events/train # train images (relative to 'path') 63145 images
+val_event: events/val # val images (relative to 'path') 15079 images
 test_event: # test images (optional)
 
-train_rgb: dsec_rgb/train # train images (relative to 'path') 63145 images
-val_rgb: dsec_rgb/val # val images (relative to 'path') 15079 images
+train_rgb: rgb/train # train images (relative to 'path') 63145 images
+val_rgb: rgb/val # val images (relative to 'path') 15079 images
 test_rgb: # test images (optional)
 
 # Classes

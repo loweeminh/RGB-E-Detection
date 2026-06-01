@@ -158,7 +158,10 @@ class BaseValidator:
                 self.args.rect = False
             self.stride = model.stride  # used in get_dataloader() for padding
             # loweeminh
-            self.dataloader = self.dataloader or self.get_dataloader(self.data["val_event"], self.data["val_rgb"], self.args.batch)
+            if self.args.split == "val":
+                self.dataloader = self.dataloader or self.get_dataloader(self.data["val_event"], self.data["val_rgb"], self.args.batch)
+            elif self.args.split == "test":
+                self.dataloader = self.dataloader or self.get_dataloader(self.data["test_event"], self.data["test_rgb"], self.args.batch)
 
             model.eval()
             model.warmup(imgsz=(1 if pt else self.args.batch, self.args.channel_event, imgsz, imgsz), 
